@@ -1,0 +1,28 @@
+<template name="produkty">
+    <div class="page-header">
+        <h1>
+            <span class="label-important label">{{kategoria}}</span> <bold><center>Produkty </center></bold>
+        </h1>
+    </div>
+    {{#each productlist}}
+        {{>produkt}}
+    {{else}}
+    <div class="page-header">
+        <h1>
+            <small>{{#if catnotselected}}Wybierz kategorie{{else}}Nie znaleziono zadnych produktow{{/if}}</small>
+        </h1>
+    </div>
+    {{/each}}
+</template>
+<template name="produkt">
+    <div class="well span3">
+        <ul id="{{_id}}" class="nav nav-list ">
+            <li class="produkcik"><img  style="height:90px;width:auto"  src="/{{thumb}}"/></li>
+            <li><strong>{{name}}</strong></li>
+            <li>{{desc}}</li>
+	    <li><strong>{{price}} zl</strong></li>
+            <li><strong>{{currency price}}</strong></li>
+            <input placeholder="Ilosc" class="input input-mini prodqty" value="0"/><a class="btn btn-success btn-mini addcart" href="#">Dodaj do koszyka</a>
+        </ul>
+    </div>
+</template>

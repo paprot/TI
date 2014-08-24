@@ -1,0 +1,22 @@
+<template name="kategoria">
+    <div class="page-header">
+        <h1>
+            <bold>Kategorie</bold>
+        </h1>
+    </div>
+<div class ="container">
+<div class ="span2">
+    <div class ="row">
+    <!--  <ul class="nav nav-pills nav-stacked"> -->
+ 	<ul class="nav nav-tabs">
+        {{#each Categories}}
+        <li class="nav nav-tabs">{{name}}</li>
+        {{#each SubCategories}}
+        <li><a href="/{{name}}">{{name}}</a></li>
+        {{/each}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  </div>
+</template>

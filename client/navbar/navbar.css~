@@ -1,0 +1,10 @@
+#login-buttons{
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 40px;
+    margin-right: 30px;
+    font-size:20px;
+}
+
+span.centerImage{
+text-align:center;
+}

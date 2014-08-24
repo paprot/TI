@@ -1,0 +1,38 @@
+<template name="koszyk">
+    <div class="page-header">
+        <h1>
+            <bold><center>Moj koszyk</center></bold>
+        </h1>
+    </div>
+   <!-- <table class="span4 table table-striped table-bordered table-hover"> -->
+      <table class="tabela">
+        <thead>
+        <th>Ilosc</th>
+        <th>Produkt</th>
+        <th>Cena</th>
+        </thead>
+        <tbody>
+        {{#each cartitems}}
+        <tr>
+            <td>{{qty}}</td>
+            <td>{{productname}}</td>
+            <td>{{currency price}}</td>
+            <td><span class="label-important label removeci">X</span></td>
+        </tr>
+        {{else}}
+        <tr>
+            <td colspan="4">Nie masz zadnych produktow w koszyku</td>
+        </tr>
+        {{/each}}
+        <tr>
+            <td class="kolumna">Koszt:</td>
+            <td colspan="2">{{currency cartitems.subtotal}}</td>
+        </tr>
+        <tr> 
+            <td class="kolumna">Calkowity koszt:</td>
+            <td colspan="2">{{currency cartitems.total}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</template>

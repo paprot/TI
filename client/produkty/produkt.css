@@ -1,0 +1,18 @@
+*{
+    margin:5;
+    padding:5;
+}
+.well{
+        margin-top:10px;
+	margin-down:10px;
+        margin-right: 5px;
+        margin-left:5px;
+}
+
+.produkcik{
+    font-family: "Times New Roman", Times, serif;
+    font-size:15px;
+    width:100px;
+    height:100px;
+    padding: 20px 10px 10px 30px;
+}
